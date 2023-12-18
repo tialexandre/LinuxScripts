@@ -16,6 +16,9 @@ echo "Server=10.1.1.254,172.16.254.5" >> /etc/zabbix/zabbix_agentd.conf
 
 echo "ServerActive=10.1.1.254" >> /etc/zabbix/zabbix_agentd.conf
 
-echo "Hostname=$HOSTNAME" >> /etc/zabbix/zabbix_agentd.conf
+echo "Hostname=${HOSTNAME}" >> /etc/zabbix/zabbix_agentd.conf
 
 echo "Include=/etc/zabbix/zabbix_agentd.d/*.conf" >> /etc/zabbix/zabbix_agentd.conf
+
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent 
