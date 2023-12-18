@@ -18,6 +18,6 @@ echo "Server=10.3.1.102" >> /etc/zabbix/zabbix_agentd.conf
 
 echo "ServerActive=10.3.1.102" >> /etc/zabbix/zabbix_agentd.conf
 
-echo "Hostname=$HOSTNAME" >> /etc/zabbix/zabbix_agentd.conf
+echo "Hostname=${HOSTNAME}" >> /etc/zabbix/zabbix_agentd.conf
 
 echo "Include=/etc/zabbix/zabbix_agentd.d/*.conf" >> /etc/zabbix/zabbix_agentd.conf
